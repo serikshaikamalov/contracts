@@ -1,0 +1,26 @@
+{
+  "name": "nuqtah-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Nuqtah platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuqtah/contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuqtah/contracts/issues"
+  },
+  "homepage": "https://github.com/nuqtah/contracts#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "hardhat": "^2.10.0"
+  }
+}
