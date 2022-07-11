@@ -15,9 +15,13 @@ contract ERC721v1 is Context, Pausable, AccessControl, ERC721Burnable {
     constructor(
         string memory name,
         string memory symbol,
-        string memory baseURI
+        string memory baseURI,
+        address extraAdmin
     ) ERC721(name, symbol) {
         _baseURIInternal = baseURI;
+        if (extraAdmin != address(0)) {
+            _grantRole(DEFAULT_ADMIN_ROLE, extraAdmin);
+        }
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(PAUSER_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);

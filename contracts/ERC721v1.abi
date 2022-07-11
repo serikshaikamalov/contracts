@@ -15,6 +15,11 @@
           "internalType": "string",
           "name": "baseURI",
           "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "extraAdmin",
+          "type": "address"
         }
       ],
       "stateMutability": "nonpayable",
@@ -646,4 +651,3 @@
       "type": "function"
     }
   ]
-  
