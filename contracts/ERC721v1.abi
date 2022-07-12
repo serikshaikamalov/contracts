@@ -18,7 +18,7 @@
         },
         {
           "internalType": "address",
-          "name": "extraAdmin",
+          "name": "extraMinter",
           "type": "address"
         }
       ],
