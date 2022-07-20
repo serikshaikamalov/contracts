@@ -2,6 +2,8 @@
 
 Smart contracts for Nuqtah platform.
 
+[flattened](flattened) folder contains the verifiable flattened contracts.
+
 ## Compile
 
 ```sh
@@ -12,6 +14,7 @@ To get bin and ABI, after `compile`, open `artifacts/contracts/contractname.json
 
 * Copy `bytecode` field and save it to a contractname.bin
 * Copy `abi` field and save it to contractname.abi
+* Run `npx hardhat flatten ./contracts/ERC721v1.sol > ./flattened/ERC721v1-flattened.sol` to generate flattened contract for explorer verifications
 
 ## Generating Code
 
