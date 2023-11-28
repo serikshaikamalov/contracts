@@ -13,9 +13,9 @@ npx hardhat compile
 
 To get bin and ABI, after `compile`, open `artifacts/contracts/contractname.json` then:
 
-* Copy `bytecode` field and save it to a contractname.bin
-* Copy `abi` field and save it to contractname.abi
-* Run `npx hardhat flatten ./contracts/ERC721v1.sol > ./flattened/ERC721v1-flattened.sol` to generate flattened contract for explorer verifications
+- Copy `bytecode` field and save it to a contractname.bin
+- Copy `abi` field and save it to contractname.abi
+- Run `npx hardhat flatten ./contracts/ERC721v1.sol > ./flattened/ERC721v1-flattened.sol` to generate flattened contract for explorer verifications
 
 ## Generating Code
 
@@ -37,7 +37,8 @@ export WEB3_RPC_URL=YYY
 web3 contract deploy --gas-limit 10000000 contracts/ERC721v1.bin NUQTAH NUQTAH https://treeder-nuqtah-api-6v7w7qf4q9-8080.githubpreview.dev/v1/collections/WeliHA9t9HyHi2EbKAc9/metadata/ 0x40433dB26CD2581767eB372cBB4d513Ea550F652
 ```
 
-### V2 deploy 
+### V2 deploy
+
 The following command will deploy a clone factory
 
 ```sh
@@ -60,12 +61,22 @@ export TOKEN_URI=http://example.com // token URI
 npx hardhat run scripts/createToken.js --network polygonMainnet
 ```
 
-
 To mint from the command line:
 
 ```sh
  web3 contract call --abi contracts/ERC721v1.abi --address 0x3ceea40c1b0759de0cd65b1151abb25bd9328950 --function safeMint 0xD5CedcDC13B20D917938Ca05dA04DE06590deCF2 1
  web3 contract call --abi contracts/ERC721v1.abi --address 0x3ceea40c1b0759de0cd65b1151abb25bd9328950 --function ownerOf 1
- ```
+```
 
- 
+To compile to bin or abi use:
+
+```
+ solcjs --bin contracts/ERC20Safe/ERC20.sol
+```
+
+If you use external contracts, imports or OpenZeppelin:
+
+```
+$ solcjs --bin --include-path node_modules/ --base-path . MainContract.sol
+
+```
